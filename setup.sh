@@ -1,14 +1,14 @@
 #!/bin/bash
 
-cp .gitignore_global ~/.gitignore_global
-cp .gitconfig ~/.gitconfig
+cp files/.gitignore_global ~/.gitignore_global
+cp files/.gitconfig ~/.gitconfig
 
-cp .zshrc ~/.zshrc
+cp files/.zshrc ~/.zshrc
 
-cp mjanjic.zsh-theme ~/.oh-my-zsh/themes/
+cp files/mjanjic.zsh-theme ~/.oh-my-zsh/themes/
 
-cp kitty.conf ~/.config/kitty/kitty.conf
+cp files/kitty.conf ~/.config/kitty/kitty.conf
 
-cp my.cnf /usr/local/etc/my.cnf
+cp files/my.cnf /usr/local/etc/my.cnf
 
-cp -R ranger/ ~/.config/ranger/
+cp -R files/ranger/ ~/.config/ranger/
