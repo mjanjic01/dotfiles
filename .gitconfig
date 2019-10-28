@@ -1,0 +1,31 @@
+[core]
+	excludesfile = /Users/mjanjic/.gitignore_global
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[user]
+	email = matej.janjic@productive.io
+	name = Matej Janjic
+	signingkey = 4E54FEB6E442039B52C44272930ADDB706D185A6
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[commit]
+	gpgsign = true
+[pager]
+       diff = diff-so-fancy | less --tabs=1,5 -RFX
+       show = diff-so-fancy | less --tabs=1,5 -RFX
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
