@@ -6,10 +6,13 @@ install git
 install git-lfs
 install gnupg
 install htop
+install libffi
 install libxml2
+install libyaml
 install mysql
 install n
 install openssh
+install openssl
 install pinentry-mac
 install postgresql
 install puma/puma/puma-dev
