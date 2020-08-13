@@ -5,7 +5,6 @@
 
 # Install system dependencies
 brew bundle
-brew cask install $(cat files/Casklist)
 
 # Move configuration files
 cp files/.gitignore_global ~/.gitignore_global
