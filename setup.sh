@@ -6,6 +6,12 @@
 # Install system dependencies
 brew bundle
 
+# Setup utilities
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+sudo puma-dev -setup -d localhost
+puma-dev -install
+
 # Move configuration files
 cp files/.gitignore_global ~/.gitignore_global
 cp files/.gitconfig ~/.gitconfig
