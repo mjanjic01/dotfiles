@@ -1,6 +1,7 @@
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/services"
+tap "puma/puma"
 
 brew "awscli"
 brew "bat"
@@ -30,14 +31,13 @@ brew "wget"
 brew "yarn"
 brew "zsh"
 
-
 # casks
 cask "alfred"
 cask "appcleaner"
 cask "chromedriver"
-cask "dotnet-sdk"
+cask "enpass"
 cask "firefox"
-cask "font-firacode-nerd-font"
+cask "font-fira-code-nerd-font"
 cask "font-roboto"
 cask "font-space-grotesk"
 cask "google-chrome"
