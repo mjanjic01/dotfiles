@@ -3,6 +3,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "puma/puma"
 
+brew "aws-vault"
 brew "awscli"
 brew "bat"
 brew "coreutils"
