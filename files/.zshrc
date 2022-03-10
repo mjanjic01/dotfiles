@@ -11,8 +11,7 @@ ZSH_THEME="mjanjic"
 # HIST_STAMPS="mm/dd/yyyy" # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-
-plugins=(docker git z)
+plugins=(git z)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -40,38 +39,22 @@ source $ZSH/oh-my-zsh.sh
 alias rake='noglob rake'
 alias cat='bat -p'
 
-# update locate database
-alias updatedb='sudo /usr/libexec/locate.updatedb'
-
 # git work
 alias todays-work='git log --all --since=6am --format="* %s" --author="$(git config --global user.name)" --reverse -- | pbcopy'
 alias yesterdays-work='git log --all --since=yesterday.6am --until=6am --format="* %s" --author="$(git config --global user.name)" --reverse -- | pbcopy'
 
-# current weather
-alias weather='f() { curl wttr.in/$1 };f'
-
-# add Emscripten paths to $PATH for compiling WebAssembly
-alias webassembly-path='export PATH="$PATH:$EMSDK_PATHS"'
-
-# EMSDK_PATHS contains only custom clang build and emscripten. Node has been removed in favor of n (Node.js version manager)
-EMSDK_PATHS="/Users/mjanjic/Library/emsdk:/Users/mjanjic/Library/emsdk/clang/e1.37.36_64bit:/Users/mjanjic/Library/emsdk/emscripten/1.37.36"
 RBENV_PATH="$HOME/.rbenv/bin"
-BREW_PATH="/usr/local/sbin"
-CARGO_PATH="$HOME/.cargo/bin"
-WAL_PATH="$HOME/.local/bin"
-DENO_PATH="$HOME/.deno/bin"
+export PATH="$RBENV_PATH:$PATH"
 
-export PATH="$WAL_PATH:$BREW_PATH:$RBENV_PATH:$CARGO_PATH:$DENO_PATH:$PATH"
 export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
 
 export RANGER_LOAD_DEFAULT_RC=false
-export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export LC_ALL=en_US.UTF-8
 
-eval "$(rbenv init -)"
+eval "$(rbenv init - zsh)"
 
 #start gpg-agent if it's not up yet
 if [ -x "$(command -v gpg-agent)" ] && [ ! "$(pgrep gpg-agent)" ]; then
@@ -80,6 +63,6 @@ fi
 
 autoload -Uz compinit
 compinit
+
 # Completion for kitty
 kitty + complete setup zsh | source /dev/stdin
-
