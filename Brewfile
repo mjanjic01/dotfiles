@@ -23,6 +23,7 @@ brew "ranger"
 brew "rbenv"
 brew "redis"
 brew "vim"
+brew "watchman"
 brew "yarn"
 brew "zsh"
 
