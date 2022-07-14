@@ -4,7 +4,7 @@
 [user]
 	email = matej.janjic@productive.io
 	name = Matej Janjic
-	signingkey = 4E54FEB6E442039B52C44272930ADDB706D185A6
+	signingkey = 59F37066A5B474D32B6B1AF3457BCA61B6978E1B
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -31,3 +31,5 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[apply]
+	whitespace = nowarn

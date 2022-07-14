@@ -1,3 +1,5 @@
+syntax on
+
 set number
 set textwidth=0
 set showbreak=+++
@@ -12,3 +14,4 @@ set softtabstop=2
 
 set ruler
 set backspace=indent,eol,start
+
