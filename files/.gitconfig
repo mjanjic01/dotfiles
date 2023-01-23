@@ -35,3 +35,5 @@
 	whitespace = red reverse
 [apply]
 	whitespace = nowarn
+[init]
+	defaultBranch = master
