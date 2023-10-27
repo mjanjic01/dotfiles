@@ -11,7 +11,8 @@ ZSH_THEME="mjanjic"
 # HIST_STAMPS="mm/dd/yyyy" # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-plugins=(git z)
+
+plugins=(docker git z)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -43,8 +44,13 @@ alias cat='bat -p'
 alias todays-work='git log --all --since=6am --format="* %s" --author="$(git config --global user.name)" --reverse -- | pbcopy'
 alias yesterdays-work='git log --all --since=yesterday.6am --until=6am --format="* %s" --author="$(git config --global user.name)" --reverse -- | pbcopy'
 
+# current weather
+alias weather='f() { curl wttr.in/$1 };f'
+
 RBENV_PATH="$HOME/.rbenv/bin"
-export PATH="$RBENV_PATH:$PATH"
+OPENSSL_PATH="/opt/homebrew/opt/openssl@1.1/bin"
+
+export PATH="$RBENV_PATH:$OPENSSL_PATH:$PATH"
 
 export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
 
@@ -64,5 +70,16 @@ fi
 autoload -Uz compinit
 compinit
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh" # This loads nvm
+
 # Completion for kitty
 kitty + complete setup zsh | source /dev/stdin
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun completions
+[ -s "/Users/mjanjic/.bun/_bun" ] && source "/Users/mjanjic/.bun/_bun"
