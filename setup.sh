@@ -22,4 +22,3 @@ cp files/mjanjic.zsh-theme ~/.oh-my-zsh/themes/
 cp files/kitty.conf ~/.config/kitty/kitty.conf
 cp files/gpg-agent.conf ~/.gnpg/gpg-agent.conf
 cp files/my.cnf etc/my.cnf
-cp -R files/ranger/ ~/.config/ranger/
