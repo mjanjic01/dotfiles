@@ -12,7 +12,7 @@ ZSH_THEME="mjanjic"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 
-plugins=(docker git z)
+plugins=(git z)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -53,8 +53,6 @@ OPENSSL_PATH="/opt/homebrew/opt/openssl@1.1/bin"
 export PATH="$RBENV_PATH:$OPENSSL_PATH:$PATH"
 
 export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
-
-export RANGER_LOAD_DEFAULT_RC=false
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
